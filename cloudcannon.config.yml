@@ -46,20 +46,20 @@ collections_config:
         fit: cover
         image: 
           - key: thumb_image_path
-          - key: post_hero.image
+          - key: image
           - Add images
       metadata:
         - icon: calendar_month
           text: 
-            - template: Created {post_hero.date|date_long}
+            - template: Created {date|date_long}
             - Add date
         - icon: person
           text:
-            - template: By {post_hero.author}
+            - template: By {author}
             - No author
         - icon: style
           text:
-            - template: '{post_hero.tags[*]}'
+            - template: '{tags[*]}'
             - No tags
 
     _enabled_editors:
@@ -80,13 +80,6 @@ collections_config:
         comment: Controls the metadata title, and the title used when linking to this page elsewhere on the site.
         options:
           empty_type: string
-      post_hero:
-        type: object
-        options:
-          preview:
-            image:
-              - key: image
-            icon: description
       image:
         type: image
         comment: The hero image at the top of the post.

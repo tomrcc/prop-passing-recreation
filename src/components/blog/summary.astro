@@ -4,8 +4,7 @@ import { Picture } from "astro:assets";
 
 const { data, slug, loading } = Astro.props;
 
-const { title, thumb_image_path, thumb_image_alt, post_hero } = data;
-const { date, tags } = post_hero;
+const { title, thumb_image_path, thumb_image_alt, date, tags } = data;
 
 const dateObj = new Date(date);
 const images = import.meta.glob<{ default: ImageMetadata }>(

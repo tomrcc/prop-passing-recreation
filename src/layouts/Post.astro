@@ -7,19 +7,17 @@ import { getCollection } from "astro:content";
 type Props = {
   frontmatter: {
     title: string;
-    post_hero: {
-      heading: string;
-      date: string | Date;
-      image: string;
-      image_alt: string;
-      author: string;
-      tags: Array<string>;
-    };
+    date: string | Date;
+    image: string;
+    image_alt: string;
+    author: string;
+    tags: Array<string>;
   };
   body: string;
 };
 
 const { frontmatter, body } = Astro.props;
+const { title, date, image, image_alt, author, tags } = frontmatter;
 
 const posts = await getCollection("blog");
 const filteredPosts = posts.filter(
@@ -30,7 +28,15 @@ const filteredPosts = posts.filter(
 <Layout {...frontmatter}>
   <div class="post-container">
     <article aria-labelled-by="blog-hero-text">
-      <PostHero bookshop:live {...frontmatter.post_hero} bodyContent={body} />
+      <PostHero
+        bookshop:live
+        title={title}
+        date={date}
+        image={image}
+        image_alt={image_alt}
+        author={author}
+        tags={tags}
+      />
       <div class="markdown-text" data-cms-edit="content" data-pagefind-body>
         <slot />
       </div>
