@@ -1,35 +1,8 @@
-# Astro CloudCannon Starter
+# Prop passing recreation
+Shows how props must be nested in an object in order for the data bindings to work properly.
 
-A starting point for developers looking to build a website with Astro, using Bookshop components in CloudCannon.
+The first prop that is passed in the code ends up being the data binding for all of the other props.
 
-Create your own copy, and start creating your own components to use in the CloudCannon CMS. Build components using `.jsx` or `.astro` files.
+The live editing works whether the props are nested in an object or not, only the data binding is scuffed.
 
-To try to cut down on setup time this starter template includes some commonly used [features](#features) in CloudCannon.
-
-This template is aimed at helping developers build sites quickly, rather than providing editors with a fully built editable site. If you are an editor looking for an already built template, have a look at [CloudCannon's templates page](https://cloudcannon.com/templates/).
-
-[See a demo version of this site](https://tiny-jackal.cloudvent.net/).
-
-## Getting Started
-
-1. To start using this template, go to the [GitHub repository](https://github.com/CloudCannon/astro-starter/), and click `Use this template` to make your own copy.
-
-2. Follow [this guide](https://cloudcannon.com/documentation/guides/astro-starter-guide/sync-your-files/) to add your new GitHub repository to CloudCannon.
-
-### Local Development
-
-1. `git clone` your repository
-2. Run `npm install`
-3. Run `npm start`
-
-### Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm start`               | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+[Link to Notion ticket](https://www.notion.so/cloudcannon/Data-bindings-in-visual-editor-1ecb2cf63b238080ae9dc39364634690#1f2b2cf63b2380989170da701f9616c8))
